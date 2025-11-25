@@ -1,11 +1,11 @@
 @charset 'UTF-8';
 
 :root {
-    --bg: #191B1C;
-    --bg-conteudo: #111213;
+    --bg: #18191A;
+    --bg-conteudo: #121213;
     --hover: #282828;
     --letras: #E7E7E7;
-    --letras-menores: #414142;
+    --letras-menores: #888787;
     --online: #469DAB;
 }
 
@@ -23,30 +23,32 @@ body {
 
 /* Fundo principal do perfil */
 div#principal {
-    background-color: lightgrey;
+     background-color: lightgrey; 
+     /* background-color: var(--bg);  */
     min-width: 300px;
-    max-width: 930px;
-    padding: 25px 20px 20px 20px;
+    max-width: 950px;
+    padding: 25px 10px 20px 10px;
     margin: auto;
 
     display: grid;
     grid-template-columns: auto auto;
-    gap: 20px; 
+    /* gap: 20px;  */
 }
 
 /* Configurações do Header */
 header {
     display: flex;
     flex-flow: row wrap;
-    grid-column: 1 / 3;
     justify-content: space-between;
     flex-flow: row wrap;
+
+    grid-column: 1 / 3;
 }
 
 header > div#informacoes {
     display: flex;
-    width: 400px;
     justify-content: space-between;
+    width: 400px;
 }
 
 header > div#informacoes > div.img > img {
@@ -71,12 +73,13 @@ header > div#informacoes > div > p#bandeira:before {
     zoom: .6;
 }
 
+
 header > div#nivel-insignia > div.nivel {
     display: flex;
     flex-flow: row nowrap;
-    width: 270px;
     justify-content: flex-start;
     align-items: center;
+    width: 290px;
     border: 1px solid blue;
     margin-bottom: 15px;
 }
@@ -132,15 +135,105 @@ header > div#nivel-insignia > div#botoes > a:hover {
     background-color: var(--hover);
 }
 
+/* Configuração da div de nav + main */
+#destaques {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+    margin-top: 30px;
+    grid-column: 1 / 3;
+}
 /* Configurações do Nav */
 nav {
-    grid-column: 2;
-    grid-row: 2;
+    background-color: var(--bg-conteudo);
+    padding: 10px 0 30px 10px;
 }
+
+nav > ul p.online {
+    color: var(--online);
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+
+nav > ul#menu-flex {
+    display: flex;
+    flex-flow: column nowrap;
+    /* list-style: none; */
+}
+
+nav > ul > li a.link {
+    text-decoration: none;
+    color: var(--letras); 
+    font-size: .9em;
+}
+
+nav > ul > li a.link:hover {
+    text-decoration: underline;
+}
+
+nav > ul > li p.numero {
+    color: var(--letras-menores);
+}
+
+nav > ul > li {
+    padding-bottom: 12px;
+}
+
+nav > ul > li > a.link p.numero {
+    display: inline;
+}
+
+nav > ul > li > p.numero {
+    display: inline;
+    font-size: 1.3em;
+}
+
+nav > ul > li > ul#imagem-insignias {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+/* Essa parte eu usei IA pois não estava conseguindo fazer os cards flutuantes com :hover nas insígnias */
+.insignias-menu {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+
+.insignias-menu img {
+    width:80%;
+    height: 80%;
+    border-radius: 6px;
+    display: block;
+}
+
+.insignias-menu p {
+    position: absolute;
+    bottom: 80px;
+    width: 150%;
+
+    background: #b7b7b7;
+    color: #504f4f;
+    font-size: 11px;
+    text-align: center;
+    padding: 6px;
+    
+    display: none;
+    border-radius: 3px;
+}
+ .insignias-menu:hover p {
+    display: block;
+} 
+
 
 
 /* Configurações do Main */
 main {
-    grid-column: 1;
-    grid-row: 2;
+    flex: 0 1 630px;
+    border: 1px solid red;
 }
