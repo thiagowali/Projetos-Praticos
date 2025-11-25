@@ -49,6 +49,7 @@ header > div#informacoes {
     display: flex;
     justify-content: space-between;
     width: 400px;
+    margin-right: 230px;
 }
 
 header > div#informacoes > div.img > img {
@@ -234,6 +235,8 @@ nav > ul > li > ul#imagem-insignias {
 
 /* Configurações do Main */
 main {
-    flex: 0 1 630px;
+    flex: 1 0 625px;
+    margin-right: 7px;
     border: 1px solid red;
+    background-color: blue;
 }
