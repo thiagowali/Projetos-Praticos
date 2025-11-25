@@ -1,0 +1,146 @@
+@charset 'UTF-8';
+
+:root {
+    --bg: #191B1C;
+    --bg-conteudo: #111213;
+    --hover: #282828;
+    --letras: #E7E7E7;
+    --letras-menores: #414142;
+    --online: #469DAB;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+/* Plado de Fundo */
+body {
+    background-color: darkgray;
+}
+
+/* Fundo principal do perfil */
+div#principal {
+    background-color: lightgrey;
+    min-width: 300px;
+    max-width: 930px;
+    padding: 25px 20px 20px 20px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px; 
+}
+
+/* Configurações do Header */
+header {
+    display: flex;
+    flex-flow: row wrap;
+    grid-column: 1 / 3;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+header > div#informacoes {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+
+header > div#informacoes > div.img > img {
+    width: 165px;
+}
+
+header > div#informacoes > div > p.icone {
+    font-size: 1.5em;
+}
+
+header > div#informacoes > div > p.icone:after {
+  content: '\25BE';
+}
+
+header > div#informacoes > div > p#bandeira {
+    font-size: 0.8em;
+    text-indent: 7px;
+}
+
+header > div#informacoes > div > p#bandeira:before {
+    content: url(Imagens/flag.png);
+    zoom: .6;
+}
+
+header > div#nivel-insignia > div.nivel {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 270px;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid blue;
+    margin-bottom: 15px;
+}
+
+header > div#nivel-insignia > div.nivel > p {
+    font-size: 1.5em;
+}
+
+header > div#nivel-insignia > div.nivel > p.numero-nivel {
+    border: 2px solid #FF4A4A;
+    border-radius: 50%;
+    font-size: 1.2em;
+    padding: 3px;
+    margin-left: 5px;
+    
+}
+
+header > div#nivel-insignia > div#insignia {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-conteudo);
+    color: var(--letras);
+    
+}
+
+header > div#nivel-insignia div#insignia > img {
+    width: 70px;
+}
+
+header > div#nivel-insignia div#insignia > p {
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+}
+
+header > div#nivel-insignia > div#botoes {
+    margin-top: 15px;
+}
+
+header > div#nivel-insignia > div#botoes > a.icone:after {
+  content: '\25BE';
+}
+
+header > div#nivel-insignia > div#botoes > a {
+    text-decoration: none;
+    background-color: var(--bg-conteudo);
+    color: var(--letras);
+    font-size: .8em;
+    padding: 7px 10px;
+}
+
+header > div#nivel-insignia > div#botoes > a:hover {
+    background-color: var(--hover);
+}
+
+/* Configurações do Nav */
+nav {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+/* Configurações do Main */
+main {
+    grid-column: 1;
+    grid-row: 2;
+}
