@@ -5,7 +5,7 @@
     --bg-conteudo: #121213;
     --hover: #282828;
     --letras: #E7E7E7;
-    --letras-menores: #888787;
+    --letras-menores: #a4a4a4;
     --online: #3ccce2;
 }
 
@@ -343,12 +343,15 @@ main section p {
 }
 
 /* Configurações de cada conteudo do Main */
+
+/* Configuração da arte */
 main > section#caixa-arte img {
     max-width: 90%;
     height: auto;
     padding: 10px;
 }
 
+/* Configuração da caixa de oficina e imagem */
 main > section#caixa-oficina > div#alinhamento-usuario-oficina {
     padding-left: 15px;
     margin-bottom: 30px;
@@ -386,14 +389,15 @@ main > section#caixa-oficina > div#gif-oficina img {
    
 }
 
-main >section#caixa-oficina >div#informacoes-oficina {
+/* Configuração dos textos abaixo da caixa oficina e caixa conquista */
+div.informacoes-oficina {
     display: flex;
     flex-flow: row nowrap;
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
-main >section#caixa-oficina >div#informacoes-oficina p {
+div.informacoes-oficina p {
     background-color: var(--bg-conteudo);
     font-size: 1em;
     color: var(--letras-menores);
@@ -401,8 +405,44 @@ main >section#caixa-oficina >div#informacoes-oficina p {
     padding-bottom: 0;
 }
 
-main >section#caixa-oficina >div#informacoes-oficina p.numero-oficina {
-    font-size: 1.8em;
+div.informacoes-oficina p.numero-oficina {
+    font-size: 2em;
     color: var(--letras);
     margin-bottom: 0;
+}
+
+/* Configuração da caixa de conquistas */
+main > section#caixa-conquistas > div#conquistas {
+    margin: 20px 10px 10px 10px;
+    padding: 7px 7px 0 7px;
+    background-color: #0A0A0A;
+    border-radius: 3px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+main > section#caixa-conquistas > div#conquistas img {
+    width: 290px;
+}
+
+main > section#caixa-conquistas > div#conquistas p {
+    color: var(--letras);
+    background-color: #1E69F4;
+    padding: 5px 5px 5px 8px;
+    margin: -3px 0 10px 0;
+    line-height: 1.2em;
+    font-weight: bold;
+    position: relative;
+    overflow: visible; 
+}
+
+main > section#caixa-conquistas > div#conquistas > div > p img {
+    position: absolute;
+    right: 0px;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: auto;
 }
