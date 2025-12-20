@@ -2,6 +2,7 @@
 
 :root {
     --bg: #18191A;
+    --bg-fundo: #0A0A0A;
     --bg-conteudo: #121213;
     --hover: #282828;
     --letras: #E7E7E7;
@@ -336,7 +337,7 @@ main section p {
     border: 1px solid yellow;
     margin: 15px 7px 7px 7px;
     padding: 5px;
-    background-color: #0C0C0D;
+    background-color: var(--bg-fundo);
     color: var(--letras-menores);
     font-size: .8em;
     line-height: 1.4em;
@@ -415,7 +416,7 @@ div.informacoes-oficina p.numero-oficina {
 main > section#caixa-conquistas > div#conquistas {
     margin: 20px 10px 10px 10px;
     padding: 7px 7px 0 7px;
-    background-color: #0A0A0A;
+    background-color: var(--bg-fundo);
     border-radius: 3px;
 
     display: flex;
@@ -461,17 +462,75 @@ main > section#caixa-atividades h3 {
 
 main > section#caixa-atividades > div#separar-atividades article.atividades {
     border: 1px solid red;
+    background-color: var(--bg-fundo);
     margin: 10px;
     padding: 10px;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades > div.quadro-atividades {
+    
 
     display: flex;
     flex-flow: row nowrap;
 }
 
-main > section#caixa-atividades > div#separar-atividades > article.atividades img.imagem-atividades {
-    width: 120px;
+main > section#caixa-atividades > div#separar-atividades > article.atividades > div.quadro-atividades p {
+    flex:auto;
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades > div.quadro-atividades  p.titulo-atividades {
+    font-size: .9em;
+    color: var(--letras);
+    font-weight: lighter;
+    padding: 0;
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades > div.quadro-atividades  p.horas-atividades {
+    font-size: .8em;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades > div.quadro-atividades img {
+    width: 160px;
 }
 
 main > section#caixa-atividades > div#separar-atividades > article.atividades div.conquistas-atividades {
+    background-color: var(--bg);
+    margin-top: 10px;
+    padding: 0;
+    
     display: flex;
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades div.conquistas-atividades p {
+    background-color: var(--bg);
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades div.conquistas-atividades div.barra {
+    width: 150px;
+    height: 12px;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px rgba(193, 193, 193, 0.229);
+    background-color: #0F0F0F;
+    align-self: center;
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades div.conquistas-atividades div.barra-interna {
+    width: 90px;
+    height: 8px;
+    border-radius: 50px;
+    margin-top: .1em;
+    margin-left: .2em;
+    background: #0a0a0a;
+background: linear-gradient(0deg, rgba(10, 10, 10, 1) 23%, rgba(102, 102, 102, 1) 80%);
+    align-self: center;
 }
