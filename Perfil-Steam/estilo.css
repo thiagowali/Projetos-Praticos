@@ -515,6 +515,10 @@ main > section#caixa-atividades > div#separar-atividades > article.atividades di
     background-color: var(--bg);
 }
 
+main > section#caixa-atividades > div#separar-atividades > article.atividades div.conquistas-atividades p.conquista-p {
+    color: var(--letras);
+}
+
 main > section#caixa-atividades > div#separar-atividades > article.atividades div.conquistas-atividades div.barra {
     width: 150px;
     height: 12px;
@@ -531,6 +535,27 @@ main > section#caixa-atividades > div#separar-atividades > article.atividades di
     margin-top: .1em;
     margin-left: .2em;
     background: #0a0a0a;
-background: linear-gradient(0deg, rgba(10, 10, 10, 1) 23%, rgba(102, 102, 102, 1) 80%);
+    background: linear-gradient(0deg, rgba(10, 10, 10, 1) 23%, rgba(102, 102, 102, 1) 80%);
     align-self: center;
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades div.conquistas-atividades div.imagem-atividades {
+    margin-left: 25px;
+
+    display: flex;
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades div.conquistas-atividades > div.imagem-atividades img {
+    margin: 5px 5px 0 0;
+    width: 35px;
+    height: 35px;
+}
+
+main > section#caixa-atividades > div#separar-atividades > article.atividades div.conquistas-atividades > div.imagem-atividades p {
+    background-color: #222223;
+    color: var(--letras);
+    padding: 10px 0 0 8px;
+    margin: 5px 5px 0 0;
+    width: 25px;
+    height: 25px;
 }
