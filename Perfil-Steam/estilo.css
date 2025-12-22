@@ -559,3 +559,8 @@ main > section#caixa-atividades > div#separar-atividades > article.atividades di
     width: 25px;
     height: 25px;
 }
+
+main > section#caixa-atividades > p#final-atividades a {
+    text-decoration: none;
+    color: var(--letras);
+}
