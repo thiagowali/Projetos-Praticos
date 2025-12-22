@@ -450,14 +450,19 @@ main > section#caixa-conquistas > div#conquistas > div > p img {
 
 /* Configuração da caixa de atividade */
 main > section#caixa-atividades > div#separar-atividades {
-
-    
     display: flex;
     flex-flow: column nowrap;
 }
 
-main > section#caixa-atividades h3 {
-    margin-bottom: 15px;
+main > section#caixa-atividades > div#titulo-atividades {
+    background-color: var(--bg-fundo);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+main > section#caixa-atividades div#titulo-atividades {
+    margin-bottom: 5px;
 }
 
 main > section#caixa-atividades > div#separar-atividades article.atividades {
@@ -560,7 +565,18 @@ main > section#caixa-atividades > div#separar-atividades > article.atividades di
     height: 25px;
 }
 
+main > section#caixa-atividades > p#final-atividades {
+    text-align: end;
+    background-color: var(--bg-conteudo);
+    font-size: .8em;
+    
+}
+
 main > section#caixa-atividades > p#final-atividades a {
     text-decoration: none;
     color: var(--letras);
+}
+
+main > section#caixa-atividades > p#final-atividades a:hover {
+    color: var(--online);
 }
