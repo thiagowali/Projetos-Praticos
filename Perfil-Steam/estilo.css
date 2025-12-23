@@ -582,3 +582,11 @@ main > section#caixa-atividades > p#final-atividades a:hover {
 }
 
 /* Configurações dos comentários */
+
+main >section#caixa-comentarios > ul > li img {
+    display: inline-block;
+}
+
+main >section#caixa-comentarios > ul > li p {
+    display: inline-block;
+}
