@@ -19,13 +19,13 @@
 
 /* Plado de Fundo */
 body {
-    background-color: darkgray;
+    background: #020024;
+background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 47%, rgba(0, 212, 255, 1) 100%);
 }
 
 /* Fundo principal do perfil */
 div#principal {
-     background-color: lightgrey; 
-     /* background-color: var(--bg);  */
+    background-color: var(--bg);
     min-width: 300px;
     max-width: 950px;
     padding: 25px 10px 20px 10px;
@@ -58,6 +58,10 @@ header > div#informacoes > div.img > img {
     width: 165px;
 }
 
+header > div#informacoes > div.usuario p {
+    color: var(--letras);
+}
+
 header > div#informacoes > div.usuario > p.icone {
     font-size: 1.5em;
 }
@@ -78,6 +82,7 @@ header > div#informacoes > div.usuario > p#bandeira:before {
 
 header > div#informacoes > div > p.texto-descrição {
     padding-top: 20px;
+    color: var(--letras);
 }
 
 header > div#nivel-insignia > div.nivel {
@@ -92,6 +97,7 @@ header > div#nivel-insignia > div.nivel {
 
 header > div#nivel-insignia > div.nivel > p {
     font-size: 1.5em;
+    color: var(--letras);
 }
 
 header > div#nivel-insignia > div.nivel > p.numero-nivel {
@@ -310,8 +316,7 @@ p#amigo-6 { border: 2px solid #949494; }
 /* Configurações do Main */
 main {
     margin-right: 5px;
-    border: 1px solid red;
-    background-color: lightslategray;
+    background-color: var(--bg-conteudo);
 
     flex: 0 0 620px;
 
@@ -322,7 +327,6 @@ main {
 main section {
     background-color: var(--bg-conteudo);
     margin-bottom: 5px;
-    border: 1px solid lightblue;
     border-radius: 3px;
 }
 
@@ -334,7 +338,6 @@ main > section h3 {
 }
 
 main section p {
-    border: 1px solid yellow;
     margin: 15px 7px 7px 7px;
     padding: 5px;
     background-color: var(--bg-fundo);
@@ -466,7 +469,6 @@ main > section#caixa-atividades div#titulo-atividades {
 }
 
 main > section#caixa-atividades > div#separar-atividades article.atividades {
-    border: 1px solid red;
     background-color: var(--bg-fundo);
     margin: 10px;
     padding: 10px;
@@ -569,7 +571,7 @@ main > section#caixa-atividades > p#final-atividades {
     text-align: end;
     background-color: var(--bg-conteudo);
     font-size: .8em;
-    
+    margin: 0 0 15px 0;
 }
 
 main > section#caixa-atividades > p#final-atividades a {
@@ -582,11 +584,81 @@ main > section#caixa-atividades > p#final-atividades a:hover {
 }
 
 /* Configurações dos comentários */
-
-main >section#caixa-comentarios > ul > li img {
-    display: inline-block;
+main >section#caixa-comentarios > ul {
+    list-style: none;
 }
 
-main >section#caixa-comentarios > ul > li p {
-    display: inline-block;
+main >section#caixa-comentarios > ul > li img {
+    width: 30px;
+    height: 30px;
+}
+
+main >section#caixa-comentarios a {
+    text-decoration: none;
+    color: var(--letras);
+    font-size: .7em;
+    margin: 10px;
+}
+
+main >section#caixa-comentarios a:hover {
+    text-decoration: underline;
+}
+
+
+main >section#caixa-comentarios > ul > li > div.usuario-comentario {
+    margin: 20px 0 10px 10px;
+
+    display: flex;
+}
+
+main >section#caixa-comentarios > ul > li > div.usuario-comentario div.div-comentario {
+    margin-left: 10px;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main >section#caixa-comentarios > ul > li > div.usuario-comentario div.div-comentario p {
+    font-size: .7em;
+    margin: 0;
+    padding: 0;
+    color: var(--letras);
+    background-color: var(--bg-conteudo);
+}
+
+main >section#caixa-comentarios > ul > li > div.usuario-comentario > div.data-comentario p{
+    font-size: .7em;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-conteudo);
+}
+
+form {
+    margin: 10px 10px 30px 10px;
+
+    display: flex;
+}
+
+form > img {
+    width:30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+input {
+    width: 94%;
+    height: 27px;
+    background-color: var(--hover);
+}
+
+input::placeholder {
+    font-size: .7em;
+    color: var(--letras-menores);
+}
+
+/* Config do footer */
+footer {
+    text-align: center;
+    color: var(--letras);
+    background-color: var(--bg-fundo);
 }
